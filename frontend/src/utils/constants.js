@@ -9,8 +9,8 @@ export const SERVER_COST = parseInt(process.env.SERVER_COST) || 10;
 export const REFERRAL_BONUS = parseInt(process.env.REFERRAL_BONUS) || 1;
 export const INITIAL_COINS = parseInt(process.env.INITIAL_COINS) || 0;
 
-export const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@inconnuhosting.com';
-export const ADMIN_PHONE = process.env.ADMIN_PHONE || '+1234567890';
+export const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'inconnuboytech@gmail.com';
+export const ADMIN_PHONE = process.env.ADMIN_PHONE || '+554488138425';
 
 export const COLORS = {
   primary: '#667eea',
