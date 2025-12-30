@@ -115,13 +115,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/servers', serverRoutes);
 app.use('/api/admin', adminRoutes);
 
-// Serve static files in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/public'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'public', 'index.html'));
-  });
-}
 
 // Error handling middleware
 app.use(errorHandler);
