@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import {
   View,
@@ -8,7 +9,7 @@ import {
   TouchableOpacity,
   TextInput,
   Alert,
-  Modal,
+  Modal as RNModal,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { showMessage } from 'react-native-flash-message';
@@ -19,7 +20,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import Layout from '../../components/layout/Layout';
 import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';
-import Modal from '../../components/common/Modal';
+import CustomModal from '../../components/common/Modal';
 
 // Services
 import {
@@ -444,7 +445,7 @@ const AdminServers = () => {
       </ScrollView>
 
       {/* Server Logs Modal */}
-      <Modal
+      <CustomModal
         visible={showLogsModal}
         onClose={() => setShowLogsModal(false)}
         title={`Logs - ${selectedServer?.name || 'Server'}`}
@@ -479,7 +480,7 @@ const AdminServers = () => {
             style={styles.logsModalButton}
           />
         </View>
-      </Modal>
+      </CustomModal>
     </Layout>
   );
 };
