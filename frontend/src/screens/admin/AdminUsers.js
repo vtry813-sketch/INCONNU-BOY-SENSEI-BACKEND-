@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   TextInput,
   Alert,
-  Modal,
+  Modal as RNModal,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { showMessage } from 'react-native-flash-message';
@@ -21,7 +21,7 @@ import Layout from '../../components/layout/Layout';
 import Card from '../../components/common/Card';
 import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';
-import Modal from '../../components/common/Modal';
+import CustomModal from '../../components/common/Modal';
 
 // Services
 import {
@@ -391,7 +391,7 @@ const AdminUsers = () => {
       </ScrollView>
 
       {/* Edit User Modal */}
-      <Modal
+      <CustomModal
         visible={showEditModal}
         onClose={() => setShowEditModal(false)}
         title="Edit User"
@@ -490,10 +490,10 @@ const AdminUsers = () => {
             )}
           </Formik>
         )}
-      </Modal>
+      </CustomModal>
 
       {/* Add/Remove Coins Modal */}
-      <Modal
+      <CustomModal
         visible={showCoinsModal}
         onClose={() => setShowCoinsModal(false)}
         title={`${coinsAction === 'add' ? 'Add' : 'Remove'} Coins`}
@@ -576,10 +576,10 @@ const AdminUsers = () => {
             )}
           </Formik>
         )}
-      </Modal>
+      </CustomModal>
 
       {/* Delete Confirmation Modal */}
-      <Modal
+      <CustomModal
         visible={showDeleteModal}
         onClose={() => setShowDeleteModal(false)}
         title="Delete User"
@@ -623,7 +623,7 @@ const AdminUsers = () => {
             </View>
           </View>
         )}
-      </Modal>
+      </CustomModal>
     </Layout>
   );
 };
