@@ -36,7 +36,7 @@ class BotLauncher {
   // Download bot files from GitHub
   async downloadBotFiles() {
     try {
-      const zipUrl = process.env.BOT_ZIP_URL || 'https://github.com/prm123456789/N/archive/refs/heads/main.zip';
+      const zipUrl = process.env.BOT_ZIP_URL || 'your bot zip';
       logger.info(`Downloading bot files from: ${zipUrl}`);
       
       const response = await axios({
